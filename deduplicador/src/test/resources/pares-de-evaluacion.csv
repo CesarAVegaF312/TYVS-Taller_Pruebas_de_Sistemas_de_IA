@@ -1,0 +1,102 @@
+# Conjunto de evaluacion del deduplicador de votantes.
+#
+# ESTE ARCHIVO ES EL ORACULO. En un sistema de IA no hay una funcion que diga
+# la respuesta correcta: hay un conjunto de casos que alguien etiqueto a mano
+# y que el sistema tiene que reproducir "suficientemente bien".
+#
+# Por eso el conjunto de evaluacion es codigo de primera clase: se versiona,
+# se revisa en pull request y se discute. Un cambio aqui cambia la definicion
+# de "correcto", igual que cambiar una asercion.
+#
+# Columnas:
+#   nombreA,nombreB,mismaPersona,grupo
+#
+# El GRUPO no lo usa el sistema para nada: solo sirve para medir despues si
+# el sistema funciona igual de bien con unas personas que con otras. Ese es
+# el modulo 3.
+#
+#   simple     nombres cortos, sin tildes, un nombre y un apellido
+#   tilde      nombres con tildes o enie, escritos con y sin ellas
+#   compuesto  nombres y apellidos compuestos, con particulas (de, del, la)
+#   abreviado  segundo nombre abreviado a una inicial
+nombreA,nombreB,mismaPersona,grupo
+Ana Torres,Ana Tores,true,simple
+Juan Perez,Juan Peres,true,simple
+Carlos Rojas,Carlos Roja,true,simple
+Luis Ramirez,Luis Ramires,true,simple
+Marta Silva,Marta Silvia,true,simple
+Pedro Castro,Pedro Casto,true,simple
+Sofia Vargas,Sofia Vargaz,true,simple
+Diego Herrera,Diego Herera,true,simple
+Laura Mendez,Laura Mendes,true,simple
+Andres Pinto,Andres Pintto,true,simple
+Ana Torres,Ana Flores,false,simple
+Juan Perez,Juan Gomez,false,simple
+Carlos Rojas,Carlos Mejia,false,simple
+Luis Ramirez,Luis Cardenas,false,simple
+Marta Silva,Marta Duarte,false,simple
+Pedro Castro,Pablo Castro,false,simple
+Sofia Vargas,Sonia Vargas,false,simple
+Diego Herrera,Diana Herrera,false,simple
+Laura Mendez,Mauro Mendez,false,simple
+Andres Pinto,Andrea Pinto,false,simple
+José Rodríguez,Jose Rodriguez,true,tilde
+María Núñez,Maria Nunez,true,tilde
+Iván Muñoz,Ivan Munoz,true,tilde
+Ramón Peña,Ramon Pena,true,tilde
+César Ibáñez,Cesar Ibanez,true,tilde
+Adrián Vásquez,Adrian Vasquez,true,tilde
+Mónica Ángulo,Monica Angulo,true,tilde
+Raúl Ocaña,Raul Ocana,true,tilde
+Nicolás Dueñas,Nicolas Duenas,true,tilde
+Verónica Alemán,Veronica Aleman,true,tilde
+José Rodríguez,José Rodrigo,false,tilde
+María Núñez,María Nieves,false,tilde
+Iván Muñoz,Iván Mendoza,false,tilde
+Ramón Peña,Ramón Parra,false,tilde
+César Ibáñez,César Ibarra,false,tilde
+Adrián Vásquez,Adrián Velasco,false,tilde
+Mónica Ángulo,Mónica Arango,false,tilde
+Raúl Ocaña,Raúl Osorio,false,tilde
+Nicolás Dueñas,Nicolás Delgado,false,tilde
+Verónica Alemán,Verónica Alzate,false,tilde
+Maria del Carmen Rodriguez Gomez,Maria del Carmen Rodriges Gomez,true,compuesto
+Juan Carlos de la Espriella,Juan Carlos de la Espriela,true,compuesto
+Ana Maria Santos de Leon,Ana Maria Santoz de Leon,true,compuesto
+Luis Felipe del Valle Ruiz,Luis Felipe del Valle Ruis,true,compuesto
+Maria Jose Ospina Lopez,Maria Jose Ospina Lopes,true,compuesto
+Jorge Enrique Montoya Cruz,Jorge Enrique Montoya Cruzz,true,compuesto
+Sandra Patricia Nieto Vega,Sandra Patricia Nieto Bega,true,compuesto
+Carlos Alberto Zapata Rios,Carlos Alberto Zapata Rio,true,compuesto
+Diana Carolina Prieto Sanz,Diana Carolina Prieto Sans,true,compuesto
+Miguel Angel Beltran Soto,Miguel Angel Beltran Sotto,true,compuesto
+Maria del Carmen Rodriguez Gomez,Maria del Pilar Rodriguez Gomez,false,compuesto
+Juan Carlos de la Espriella,Juan Camilo de la Espriella,false,compuesto
+Ana Maria Santos de Leon,Ana Lucia Santos de Leon,false,compuesto
+Luis Felipe del Valle Ruiz,Luis Fernando del Valle Ruiz,false,compuesto
+Maria Jose Ospina Lopez,Maria Paula Ospina Lopez,false,compuesto
+Jorge Enrique Montoya Cruz,Jorge Eduardo Montoya Cruz,false,compuesto
+Sandra Patricia Nieto Vega,Sandra Milena Nieto Vega,false,compuesto
+Carlos Alberto Zapata Rios,Carlos Andres Zapata Rios,false,compuesto
+Diana Carolina Prieto Sanz,Diana Marcela Prieto Sanz,false,compuesto
+Miguel Angel Beltran Soto,Miguel Antonio Beltran Soto,false,compuesto
+Jose A Rodriguez,Jose Antonio Rodriguez,true,abreviado
+Ana M Torres,Ana Maria Torres,true,abreviado
+J Carlos Mejia,Juan Carlos Mejia,true,abreviado
+Luis F Ramirez,Luis Felipe Ramirez,true,abreviado
+M Fernanda Ossa,Maria Fernanda Ossa,true,abreviado
+Carlos A Rojas,Carlos Alberto Rojas,true,abreviado
+Ana L Gutierrez,Ana Lucia Gutierrez,true,abreviado
+Pedro J Castro,Pedro Jose Castro,true,abreviado
+Sandra P Nieto,Sandra Patricia Nieto,true,abreviado
+Diego F Herrera,Diego Fernando Herrera,true,abreviado
+Jose A Rodriguez,Jose Alberto Ramirez,false,abreviado
+Ana M Torres,Ana Marcela Trujillo,false,abreviado
+J Carlos Mejia,Jose Carlos Medina,false,abreviado
+Luis F Ramirez,Luis Fabian Restrepo,false,abreviado
+M Fernanda Ossa,Marta Fernanda Ortiz,false,abreviado
+Carlos A Rojas,Carlos Arturo Rueda,false,abreviado
+Ana L Gutierrez,Ana Laura Guerrero,false,abreviado
+Pedro J Castro,Pedro Julian Cardona,false,abreviado
+Sandra P Nieto,Sandra Paola Norena,false,abreviado
+Diego F Herrera,Diego Felipe Hernandez,false,abreviado
