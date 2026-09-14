@@ -46,9 +46,9 @@ este par" no dice nada por si solo.
 
 ## Un defecto de equidad bien redactado
 
-> ❌ "El sistema no funciona bien con algunos nombres."
+> **Mal:** "El sistema no funciona bien con algunos nombres."
 >
-> ✅ "El sistema tiene recall 0.000 sobre nombres con la inicial abreviada:
+> **Bien:** "El sistema tiene recall 0.000 sobre nombres con la inicial abreviada:
 > no detecta ninguno de los 10 duplicados reales del grupo. Afecta a quien se
 > inscribe como 'Ana M Torres' y despues como 'Ana Maria Torres': nunca sera
 > detectada como duplicada. El F1 global de 0.833 no lo insinua. Causa:

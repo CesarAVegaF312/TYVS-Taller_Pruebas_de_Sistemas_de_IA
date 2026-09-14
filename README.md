@@ -18,7 +18,7 @@ sobre un caso suelto**. Hay que probar de otra manera.
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 
 - Entender el **problema del oráculo** y por qué obliga a cambiar de aserciones
   a métricas.
@@ -99,7 +99,7 @@ ella cambia algo más importante: **un caso que falla deja de ser un bug
 automáticamente**. Puede ser un caso difícil, una etiqueta mal puesta o una
 degradación real. Distinguirlos es el trabajo.
 
-> ⚠️ **El conjunto de evaluación es código.** Se versiona, se revisa en pull
+> **El conjunto de evaluación es código.** Se versiona, se revisa en pull
 > request y se discute, porque cambiarlo cambia la definición de "correcto".
 > Y la calidad del sistema no puede superar la de sus etiquetas.
 
@@ -185,7 +185,7 @@ caen entre 0.808 y 0.925, todas bajo el umbral de 0.95.
 nadie se le ocurrió comprobar si lo que se le pidió funcionaba igual para
 todos.**
 
-> 🔍 **La prueba 04 enseña el error contrario, y hay que verlo una vez.** Con
+> **La prueba 04 enseña el error contrario, y hay que verlo una vez.** Con
 > umbral 0.90, el grupo `tilde` salía con la peor precisión de los cuatro
 > (0.588) y era tentador concluir *"el sistema discrimina a las personas con
 > tildes"*. Era **falso**: los pares negativos de ese grupo se habían escrito
