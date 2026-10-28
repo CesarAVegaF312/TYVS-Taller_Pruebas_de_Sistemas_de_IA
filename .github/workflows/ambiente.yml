@@ -1,0 +1,25 @@
+name: ambiente
+
+# Verifica que el ambiente definido como codigo (.devcontainer y, si existe,
+# docker-compose.yml) se construye y funciona. Corre cuando cambia algo del
+# ambiente, y a mano desde la pestana Actions.
+on:
+  pull_request:
+    paths:
+      - '.devcontainer/**'
+      - '.github/workflows/ambiente.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  devcontainer:
+    name: Devcontainer se construye y la suite pasa adentro
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: cd deduplicador && mvn -B verify
