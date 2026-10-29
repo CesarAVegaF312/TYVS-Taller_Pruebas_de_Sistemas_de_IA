@@ -342,3 +342,15 @@ Ingeniería de Software, **Universidad de La Sabana**.
 
 Todos los nombres de los conjuntos de datos son **ficticios**. No proceden de
 ningún padrón real ni de ninguna base de datos de personas.
+
+---
+
+### Licencia de uso
+
+Este material se distribuye bajo la licencia [Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es).
+
+Puedes **usar, adaptar o compartir** este contenido con fines educativos, siempre que:
+
+1. Se reconozca la autoría del profesor **César Augusto Vega Fernández**.
+2. No se utilice con fines comerciales.
+3. Las obras derivadas se distribuyan bajo la misma licencia.
