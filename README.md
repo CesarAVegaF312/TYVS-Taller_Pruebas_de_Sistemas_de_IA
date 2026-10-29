@@ -84,6 +84,19 @@ imprimen tablas de métricas que son parte del material.
 
 ---
 
+## Ambiente de trabajo reproducible
+
+El repositorio trae su **ambiente definido como código** en [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json): Java 17 y Maven, en las mismas versiones para todo el curso. Es **opcional**: si ya tiene todo instalado, siga con la puesta en marcha de siempre.
+
+- **GitHub Codespaces**, sin instalar nada: en la página del repositorio, *Code → Codespaces → Create codespace*. Se abre VS Code en el navegador. Consume la cuota gratuita de Codespaces: deténgalo al terminar.
+- **VS Code y Docker** en su equipo: instale la extensión *Dev Containers*, abra la carpeta del repositorio y elija *Reopen in Container*.
+
+Al crearse, el ambiente compila el proyecto una vez para descargar las dependencias. Después `mvn verify` funciona igual que en su equipo.
+
+> **Por qué importa.** "En mi máquina funciona" casi siempre es una diferencia de ambiente: otra versión de Java, de Maven, del navegador o del sistema operativo. Un ambiente versionado junto al código elimina esa variable. El workflow [`ambiente.yml`](.github/workflows/ambiente.yml) lo comprueba: construye el contenedor y corre la suite dentro de él.
+
+---
+
 ## Módulos del taller
 
 ### Módulo 1 — El problema del oráculo ([`MetricasDeEvaluacionTest`](deduplicador/src/test/java/edu/unisabana/tyvs/dedup/MetricasDeEvaluacionTest.java))
